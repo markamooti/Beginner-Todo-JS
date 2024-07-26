@@ -16,9 +16,19 @@ body {
 
 header {
     font-size: 2rem;
+    min-width: 100vw;
+
+}
+
+.main-container {
+    min-width: 100vw;
+    /* border-width: 10px;
+    border-color: black;
+    border-style: solid; */
 }
 
 header, form {
+    
     min-height: 20vh;
     display: flex;
     justify-content: center;
@@ -31,6 +41,11 @@ form input, form button {
     font-size: 2rem;
     border: none;
     background-color: lightgray;
+}
+
+form input {
+    margin: 0.5rem;
+    min-width: 10rem;
 }
 
 form button {
@@ -158,4 +173,12 @@ select {
 .select:hover::after {
     background-color: black;
     color: lightgray;
+}
+
+@media screen and (max-width: 500px) {
+
+    header {
+        font-size: 1rem;
+    }
+
 }
