@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+Mono:100,200,300,regular,500,600,700,800,900);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: linear-gradient(120deg, #c1a54b, #fda085); */
+    color: black;
+    font-family: "Noto Sans Mono", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    font-family: "Noto Sans Mono";
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: lightgray;
+}
+
+form button {
+    color: white;
+    background: palegreen;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: green;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+    /* background-color: purple; */
+}
+
+.todo {
+    margin: 0.5rem;
+    /* background-color: lightgray; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+
+    transition: all 0.3s ease;
+}
+
+.todo li {
+    flex: 1;
+    max-width: 30vw;
+    /* background-color: purple; */
+    /* text-wrap: pretty; */
+}
+
+.todo.completed li{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.todo.completed button {
+    opacity: 0.5;
+}
+.todo.completed button:hover {
+    opacity: 1;
+}
+
+.todo button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    
+    /* border-width: 0.2rem; */
+    /* border-style: solid; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn {
+    border-color: red;
+    color: red;
+    background-color: white;
+}
+/* .delete-btn:hover {
+    color: black;
+} */
+
+.completed-btn {
+    border-color: green;
+    color: green;
+    background-color: white;
+}
+
+.fa-square-check, .fa-trash {
+    pointer-events: none;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    /* opacity: 0; */
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    font-family: "Noto Sans Mono";
+    /* margin: 1rem; */
+    padding: 1rem;
+    background-color: lightgray;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.select::after {
+    pointer-events: none;
+    content: "\25BC";
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: black;
+    color: lightgray;
+}
