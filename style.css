@@ -175,7 +175,7 @@ select {
     color: lightgray;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 481px) and (max-width: 767px) {
 
     header {
         font-size: 1rem;
